@@ -1,0 +1,14 @@
+def is_prime(number):
+    for factor in range(2, number):
+        if (number % factor > 0 and number % 3 > 0 and number % 5 > 0 and number % 7 > 0) or number == 2 or number == 3 or number == 5 or number == 7:
+            return True
+        else:
+            return False
+
+
+def mersennes(n_start, n_end):
+    list_mersennes = []
+    for n in range(n_start, n_end):
+        if is_prime(n):
+            list_mersennes.append(2**n - 1)
+    return list_mersennes
