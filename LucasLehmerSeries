@@ -1,0 +1,11 @@
+def lucas_lehmer(p):
+    mes = (2**p - 1)
+    i = []
+    n = 4
+    count = 0
+    while count <= (p-2):
+        i.append(n)
+        x = ((n**2 - 2) % mes)
+        n = x
+        count += 1
+    return i
