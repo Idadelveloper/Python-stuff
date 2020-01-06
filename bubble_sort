@@ -1,0 +1,22 @@
+def bubble_sort(items):
+    x = len(list(items))
+    final = []
+    final.append(items[0])
+    for num in range(1, x):
+        a = final[-1]
+        b = items[num]
+        if a > b:
+            final.pop()
+            final.append(b)
+            final.append(a)
+        else:
+            final.append(b)
+    items.sort()
+    if final != items:
+        bubble_sort(final)
+    return final
+
+
+#Example
+x = [9, 5, 3, 0, 1, 8, 7, 6, 87, 2, 56, 76, 12, 90, 34, 78, 14]
+print(bubble_sort(x))
